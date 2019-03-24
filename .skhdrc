@@ -1,0 +1,92 @@
+#
+# NOTE: You can do notifications with sounds: https://code-maven.com/display-notification-from-the-mac-command-line
+# NOTE: Sounds live in `/System/Library/Sounds`
+# NOTE: Full example for ideas: https://github.com/koekeishiya/skhd/blob/master/examples/skhdrc
+#
+
+# reload chunkwm
+shift + alt - r : osascript -e 'display notification "⚠️ Reload️ing..." with title "🔎 Chunkwm" sound name "Tink"';\
+                  brew services restart chunkwm;\
+                  osascript -e 'display notification "♻️ Reloaded️" with title "🔎 Chunkwm" sound name "Pop"'
+
+alt - return : /Applications/Hyper.app/Contents/MacOS/Hyper ~ &
+
+# enter fullscreen mode for the focused container
+alt - f : chunkc tiling::window --toggle fullscreen
+
+# change focus between tiling / floating windows
+shift + alt - space : chunkc tiling::window --toggle float
+
+# change layout of desktop
+alt - e : chunkc tiling::desktop --layout bsp
+alt - r : chunkc tiling::desktop --layout monocle
+
+# Change tiling padding
+alt - w : chunkc tiling::desktop --toggle offset;
+
+# kill focused window
+shift + alt - q : chunkc tiling::window --close
+
+# change focus
+alt - h : chunkc tiling::window --focus west
+alt - j : chunkc tiling::window --focus south
+alt - k : chunkc tiling::window --focus north
+alt - l : chunkc tiling::window --focus east
+# TODO: Allow for whitelist? chunkc tiling::query --window name
+# ctrl - h : chunkc tiling::window --focus west
+# ctrl - j : chunkc tiling::window --focus south
+# ctrl - k : chunkc tiling::window --focus north
+# ctrl - l : chunkc tiling::window --focus east
+
+alt - p : chunkc tiling::window --focus prev
+alt - n : chunkc tiling::window --focus next
+
+# move focused window
+shift + alt - h : chunkc tiling::window --warp west
+shift + alt - j : chunkc tiling::window --warp south
+shift + alt - k : chunkc tiling::window --warp north
+shift + alt - l : chunkc tiling::window --warp east
+
+alt - r : chunkc tiling::desktop --rotate 90
+
+# focus on desktop
+# TODO: This doesn't work
+alt - 1 : chunkc tiling::desktop --focus 1
+alt - 2 : chunkc tiling::desktop --focus 2
+alt - 3 : chunkc tiling::desktop --focus 3
+alt - 4 : chunkc tiling::desktop --focus 4
+alt - 5 : chunkc tiling::desktop --focus 5
+alt - 6 : chunkc tiling::desktop --focus 6
+alt - 7 : chunkc tiling::desktop --focus 7
+
+# move focused container to workspace
+shift + alt - m : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
+shift + alt - p : chunkc tiling::window --send-to-desktop prev
+shift + alt - n : chunkc tiling::window --send-to-desktop next
+shift + alt - 1 : chunkc tiling::window --send-to-desktop 1
+shift + alt - 2 : chunkc tiling::window --send-to-desktop 2
+shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
+shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
+shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
+shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+
+# send window to desktop and follow focus
+# TODO: Focus doesn't work so this doesn't matter
+shift + cmd - x : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop); chunkc tiling::desktop --focus $(chunkc get _last_active_desktop)
+shift + cmd - z : chunkc tiling::window --send-to-desktop prev; chunkc tiling::desktop --focus prev
+shift + cmd - c : chunkc tiling::window --send-to-desktop next; chunkc tiling::desktop --focus next
+shift + cmd - 1 : chunkc tiling::window --send-to-desktop 1; chunkc tiling::desktop --focus 1
+shift + cmd - 2 : chunkc tiling::window --send-to-desktop 2; chunkc tiling::desktop --focus 2
+shift + cmd - 3 : chunkc tiling::window --send-to-desktop 3; chunkc tiling::desktop --focus 3
+shift + cmd - 4 : chunkc tiling::window --send-to-desktop 4; chunkc tiling::desktop --focus 4
+shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5; chunkc tiling::desktop --focus 5
+shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6; chunkc tiling::desktop --focus 6
+# shift + cmd - 7 : chunkc tiling::window --send-to-desktop 7; chunkc tiling::desktop --focus 7
+
+# resize windows
+# General docs: https://github.com/koekeishiya/chunkwm/blob/master/src/plugins/tiling/README.md#increase-region-size
+# Recipe: https://github.com/koekeishiya/chunkwm/wiki/Useful-tips-and-workarounds#resize-regions-similar-to-the-behavior-known-from-the-i3-window-manager
+shift + alt + ctrl - h : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
+shift + alt + ctrl - j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
+shift + alt + ctrl - k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
+shift + alt + ctrl - l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
