@@ -13,6 +13,7 @@ alt - return : /Applications/Hyper.app/Contents/MacOS/Hyper ~ &
 
 # enter fullscreen mode for the focused container
 alt - f : chunkc tiling::window --toggle fullscreen
+# shift + alt - f : chunkc tiling::window --toggle native-fullscreen
 
 # change focus between tiling / floating windows
 shift + alt - space : chunkc tiling::window --toggle float
@@ -22,7 +23,7 @@ alt - e : chunkc tiling::desktop --layout bsp
 alt - r : chunkc tiling::desktop --layout monocle
 
 # Change tiling padding
-alt - w : chunkc tiling::desktop --toggle offset;
+alt - w : chunkc tiling::desktop --toggle offset
 
 # kill focused window
 shift + alt - q : chunkc tiling::window --close
