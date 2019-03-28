@@ -13,27 +13,29 @@ Just run the install/bootstrap script. This script requires `homebrew`.
 
 ## Usage
 
+Here's a list of all the bindings, followed by a keyboard diagram that links back up to this table.
+
 | Link | Keybind | Description |
 | --- | --- | --- |
-| <a id="reload">🔗</a> | `shift + alt - r` | Reload `chunkwm` |
 | <a id="">🔗</a> | `alt - return` | Open a new `Hyper` terminal |
 | <a id="">🔗</a> | `alt - f` | Toggle window to be fullscreen |
-| <a id="">🔗</a> | `shift + alt - space` | Change focus between tiling / floating windows |
 | <a id="">🔗</a> | `alt - e` | Change desktop layout to `bsp` |
 | <a id="">🔗</a> | `alt - r` | Change desktop layout to `monocle` |
 | <a id="">🔗</a> | `alt - w` | Toggle desktop offset padding. This is useful for transitioning to smaller screens. |
-| <a id="">🔗</a> | `shift + alt - q` | Kill focused window |
 | <a id="">🔗</a> | `alt - h` | Change window focus left |
 | <a id="">🔗</a> | `alt - j` | Change window focus down |
 | <a id="">🔗</a> | `alt - k` | Change window focus up |
 | <a id="">🔗</a> | `alt - l` | Change window focus right |
 | <a id="">🔗</a> | `alt - p` | Change window focus to previous window |
 | <a id="">🔗</a> | `alt - n` | Change window focus to next window |
+| <a id="">🔗</a> | `alt - r` | Rotate desktop windows 90 degrees |
+| <a id="reload">🔗</a> | `shift + alt - r` | Reload `chunkwm` |
+| <a id="">🔗</a> | `shift + alt - space` | Change focus between tiling / floating windows |
+| <a id="">🔗</a> | `shift + alt - q` | Kill focused window |
 | <a id="">🔗</a> | `shift + alt - h` | Move focused window left |
 | <a id="">🔗</a> | `shift + alt - j` | Move focused window down |
 | <a id="">🔗</a> | `shift + alt - k` | Move focused window up |
 | <a id="">🔗</a> | `shift + alt - l` | Move focused window right |
-| <a id="">🔗</a> | `alt - r` | Rotate desktop windows 90 degrees |
 | <a id="">🔗</a> | `shift + alt - m` | Move focused window to last active workspace |
 | <a id="">🔗</a> | `shift + alt - p` | Move focused window to previous workspace |
 | <a id="">🔗</a> | `shift + alt - n` | Move focused window to next workspace |
