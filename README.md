@@ -10,9 +10,9 @@ Just run the install/bootstrap script. This script requires `homebrew`.
 ./bootstrap
 ```
 
-## Usage API
+## Usage API / Layout Diagram
 
-Here's a list of all the bindings, followed by a keyboard diagram that links back up to this table.
+Here's a list of all the bindings, followed by a keyboard diagram that represents that prefix. The letters link to the corresponding table.
 
 ### Prefix: `alt`
 
@@ -44,6 +44,21 @@ Here's a list of all the bindings, followed by a keyboard diagram that links bac
 | <a id="focus-workspace-6" /> `alt - 6` | Change workspace focus to `6` |
 | <a id="focus-workspace-7" /> `alt - 7` | Change workspace focus to `7` |
 
+<big><pre>
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+│   │ [1](#focus-workspace-1) │ [2](#focus-workspace-2) │ [3](#focus-workspace-3) │ [4](#focus-workspace-4) │ [5](#focus-workspace-5) │ [6](#focus-workspace-6) │ [7](#focus-workspace-7) │   │   │   │   │   │   │   │   │
+├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┼───┤
+│     │   │   │   │ [R](#reload) │   │   │   │   │   │ [P](#focus-previous) │   │   │     │   │
+├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┼───┤
+│      │   │   │   │ [F](#full-screen) │   │ [H](#focus-left) │ [J](#focus-down) │ [K](#focus-up) │ [L](#focus-right) │   │   │   [↵](#terminal)    │   │
+├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┬───┼───┤
+│        │   │   │   │   │   │ [N](#focus-next) │   │   │   │   │      │   │   │
+├────┬───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬─┬───┼───┼───┤
+│    │LAlt│    │                        │    │    │ │   │   │   │
+└────┴────┴────┴────────────────────────┴────┴────┘ └───┴───┴───┘
+</big></pre>
+
+
 ### Prefix: `alt + shift`
 
 | Misc                                                | Description                                    |
@@ -72,6 +87,21 @@ Here's a list of all the bindings, followed by a keyboard diagram that links bac
 | <a id="move-focused-workspace-6" /> `shift + alt - 6` | Move focused window to workspace `6`         |
 | <a id="move-focused-workspace-7" /> `shift + alt - 7` | Move focused window to workspace `7`         |
 
+<big><pre>
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+│   │ [1](#move-focused-workspace-1) │ [2](#move-focused-workspace-2) │ [3](#move-focused-workspace-3) │ [4](#move-focused-workspace-4) │ [5](#move-focused-workspace-5) │ [6](#move-focused-workspace-6) │ [7](#move-focused-workspace-7) │   │   │   │   │   │   │   │   │
+├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┼───┤
+│     │ [Q](#kill-focused) │   │   │ [R](#reload) │   │   │   │   │   │ [P](#move-focused-previous) │   │   │     │   │
+├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┼───┤
+│      │   │   │   │   │   │ [H](#move-focused-left) │ [J](#move-focused-down) │ [K](#move-focused-up) │ [L](#move-focused-right) │   │   │        │   │
+├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┬───┼───┤
+│ LShift │   │   │   │   │   │ [N](#move-focused-next) │ [M](#move-focused-previous) │   │   │   │      │   │   │
+├────┬───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬─┬───┼───┼───┤
+│    │LAlt│    │         [Space](#toggle-focus-float)          │    │    │ │   │   │   │
+└────┴────┴────┴────────────────────────┴────┴────┘ └───┴───┴───┘
+</big></pre>
+
+
 ### Prefix: `alt + shift + ctrl`
 
 | Resize Window                                    | Description                 |
@@ -81,44 +111,6 @@ Here's a list of all the bindings, followed by a keyboard diagram that links bac
 | <a id="resize-up" /> `shift + alt + ctrl - k`    | Resize focused window up    |
 | <a id="resize-right" /> `shift + alt + ctrl - l` | Resize focused window right |
 
-## Layout Diagram
-
-The letters link to the table above.
-
-**Prefix:** `alt`
- 
-<big><pre>
-┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
-│   │ [1](#focus-workspace-1) │ [2](#focus-workspace-2) │ [3](#focus-workspace-3) │ [4](#focus-workspace-4) │ [5](#focus-workspace-5) │ [6](#focus-workspace-6) │ [7](#focus-workspace-7) │   │   │   │   │   │   │   │   │
-├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┼───┤
-│     │   │   │   │ [R](#reload) │   │   │   │   │   │ [P](#focus-previous) │   │   │     │   │
-├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┼───┤
-│      │   │   │   │ [F](#full-screen) │   │ [H](#focus-left) │ [J](#focus-down) │ [K](#focus-up) │ [L](#focus-right) │   │   │   [↵](#terminal)    │   │
-├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┬───┼───┤
-│        │   │   │   │   │   │ [N](#focus-next) │   │   │   │   │      │   │   │
-├────┬───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬─┬───┼───┼───┤
-│    │    │LAlt│                        │    │    │ │   │   │   │
-└────┴────┴────┴────────────────────────┴────┴────┘ └───┴───┴───┘
-</big></pre>
-
-**Prefix:** `alt + shift`
- 
-<big><pre>
-┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
-│   │ [1](#move-focused-workspace-1) │ [2](#move-focused-workspace-2) │ [3](#move-focused-workspace-3) │ [4](#move-focused-workspace-4) │ [5](#move-focused-workspace-5) │ [6](#move-focused-workspace-6) │ [7](#move-focused-workspace-7) │   │   │   │   │   │   │   │   │
-├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┼───┤
-│     │ [Q](#kill-focused) │   │   │ [R](#reload) │   │   │   │   │   │ [P](#move-focused-previous) │   │   │     │   │
-├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┼───┤
-│      │   │   │   │ [F](#full-screen) │   │ [H](#move-focused-left) │ [J](#move-focused-down) │ [K](#move-focused-up) │ [L](#move-focused-right) │   │   │        │   │
-├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┬───┼───┤
-│ LShift │   │   │   │   │   │ [N](#move-focused-next) │ [N](#move-focused-previous) │   │   │   │      │   │   │
-├────┬───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬─┬───┼───┼───┤
-│    │    │LAlt│         [Space](#toggle-focus-float)          │    │    │ │   │   │   │
-└────┴────┴────┴────────────────────────┴────┴────┘ └───┴───┴───┘
-</big></pre>
-
-**Prefix:** `alt + shift + ctrl`
- 
 <big><pre>
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
 │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   │
@@ -129,9 +121,10 @@ The letters link to the table above.
 ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┬───┼───┤
 │ LShift │   │   │   │   │   │   │   │   │   │   │      │   │   │
 ├────┬───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬─┬───┼───┼───┤
-│    │LCtl│LAlt│                        │    │    │ │   │   │   │
+│LCtl│LAlt│    │                        │    │    │ │   │   │   │
 └────┴────┴────┴────────────────────────┴────┴────┘ └───┴───┴───┘
 </big></pre>
+ 
 
 <!---
 ```
