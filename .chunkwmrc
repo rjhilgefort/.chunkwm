@@ -7,11 +7,10 @@
 # NOTE: specify the absolutepath to the directory to use when
 #       loading a plugin. '~' expansion is supported.
 #
-#
 # NOTE: Logs are located at the following locations:
-#       - /tmp/chunkwm.[out|err].log
 #       - /usr/local/var/log/skhd/skhd.[out|err].log
-#
+chunkc core::log_file /tmp/logs/chunkwm.log
+chunkc core::log_level info
 
 chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 
@@ -19,63 +18,69 @@ chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 # NOTE: if enabled, chunkwm will monitor the specified plugin_dir
 #       and automatically reload any '.so' file that is changed.
 #
-
 chunkc core::hotload 1
 chunkc core::unload tiling.so
 chunkc core::unload ffm.so
 chunkc core::unload border.so
 
-#
-# NOTE: the following are config variables for the chunkwm-tiling plugin.
-#
-
+# Layouts
 chunkc set global_desktop_mode           bsp
 # chunkc set 2_desktop_mode                monocle
 # chunkc set 5_desktop_mode                float
 
+# Padding / Tiling
 chunkc set global_desktop_offset_top     40
 chunkc set global_desktop_offset_bottom  40
 chunkc set global_desktop_offset_left    40
 chunkc set global_desktop_offset_right   40
 chunkc set global_desktop_offset_gap     20 # Gap size
-
 chunkc set desktop_padding_step_size     10.0
 chunkc set desktop_gap_step_size         5.0
 
-chunkc set bsp_spawn_left                1
-chunkc set bsp_optimal_ratio             1.618
-chunkc set bsp_split_mode                optimal
-chunkc set bsp_split_ratio               0.5
-
-chunkc set monitor_focus_cycle           1
-chunkc set window_focus_cycle            monitor
-
-chunkc set mouse_follows_focus           1
-chunkc set window_float_next             0
-chunkc set window_float_center           1
-chunkc set window_region_locked          1
-
+# Border settings
 chunkc set preselect_border_color        0xFFD75F5F
 chunkc set preselect_border_width        5
 chunkc set preselect_border_radius       0
-
 chunkc set focused_border_color          0xFFCC0000 # (blue=0xff0f6288)
 chunkc set focused_border_width          5
 chunkc set focused_border_radius         5
 chunkc set focused_border_skip_floating  0
 
-# TODO: This doesn't work
+# Bsp layout settings
+chunkc set bsp_spawn_left                1
+chunkc set bsp_optimal_ratio             1.618
+chunkc set bsp_split_mode                optimal
+chunkc set bsp_split_ratio               0.5
+
+# Window settings
+chunkc set window_focus_cycle            monitor
+chunkc set window_float_next             0
+chunkc set window_float_center           1
+chunkc set window_region_locked          1
+
+# Window fading
+chunkc set window_fade_inactive          1
+chunkc set window_fade_alpha             0.95
+chunkc set window_fade_duration          0.1
+
+# Monitor things
+chunkc set monitor_focus_cycle           1
+
+# TODO: This doesn't work: https://github.com/koekeishiya/chunkwm/issues/593
+# Mouse settings
+chunkc set mouse_follows_focus           1
 chunkc set mouse_modifier                alt
 chunkc set mouse_move_window             1
 chunkc set mouse_resize_window           1
+# chunkc set mouse_motion_interval         1000
 
-# chunkc tiling::rule --owner "Harvest" --state float
+# Window Exceptions
+chunkc tiling::rule --owner "Harvest" --state float
 
 #
 # NOTE: specify plugins to load when chunkwm starts.
 #       if chunkc plugin_dir is not set, the absolutepath is necessary.
 #
-
 chunkc core::load border.so
 chunkc core::load tiling.so
 chunkc core::load ffm.so
