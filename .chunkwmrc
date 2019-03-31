@@ -74,8 +74,10 @@ chunkc set mouse_move_window             1
 chunkc set mouse_resize_window           1
 # chunkc set mouse_motion_interval         1000
 
+# TODO: This doesn't work
 # Window Exceptions
-chunkc tiling::rule --owner "Harvest" --state float
+# chunkc tiling::rule --owner \"Harvest\" --state float
+# chunkc tiling::rule --owner Spotify --desktop 4 --follow-desktop
 
 #
 # NOTE: specify plugins to load when chunkwm starts.
