@@ -29,4 +29,4 @@ sudo chunkwm --install-sa
 # Start services
 echo "ℹ️: Starting services (they'll start on boot going forward)"
 brew services start chunkwm
-brew services start skyd
+brew services start skhd

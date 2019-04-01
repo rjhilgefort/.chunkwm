@@ -141,6 +141,7 @@ M1 - No-config Setup
 - [ ] Figure out why mouse resize and move aren't working.
 - [ ] Allow for a configuration extension/override via user file.
 - [ ] Allow for layout serialization and de-serialization ([🔗](https://github.com/koekeishiya/chunkwm/blob/master/src/plugins/tiling/README.md#serialize-desktop-bsp-tree-to-file))
+- [ ] Add bit bar install and chunkwm plugin to `bootstrap` script.
 
 M2 - GUI 
 - [ ] Stand up an electron app.
