@@ -136,3 +136,9 @@ shift + alt + ctrl - a : open -a Vivaldi;\
 # split region to rows:cols grid, windows on left:top grid, have <width> times grid width and <height> times grid height
 # shift + alt + ctrl - q : chunkc tiling::window --grid-layout 1:3:1:1:1:1;\
 #                          osascript -e 'display notification "⚠️ Hi!" with title "🔎 Chunkwm" sound name "Tink"';
+
+shift + alt + ctrl - q : chunkc tiling::desktop --serialize /tmp/chunkwm-rjh;\
+                         osascript -e 'display notification "⚠️ Serialized!" with title "🔎 Chunkwm" sound name "Tink"';
+
+shift + alt + ctrl - w : chunkc tiling::desktop --deserialize /tmp/chunkwm-rjh;\
+                         osascript -e 'display notification "⚠️ Deserialized!" with title "🔎 Chunkwm" sound name "Tink"';
