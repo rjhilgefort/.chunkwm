@@ -22,6 +22,8 @@ alt - e : chunkc tiling::desktop --mirror vertical
 alt - r : chunkc tiling::desktop --layout monocle
 alt - t : chunkc tiling::desktop --layout bsp
 alt - y : chunkc tiling::desktop --layout float
+# TODO: Docs
+alt - m : chunkc tiling::desktop --rotate 90
 
 # change focus
 alt - h : chunkc tiling::window --focus west

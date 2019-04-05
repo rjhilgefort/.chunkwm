@@ -4,7 +4,14 @@ This project is just an install script and opinionated configuration for `chunkw
 
 ## Installation
 
-Just run the install/bootstrap script. This script requires `homebrew`.
+To enable workspace switching and controls, you'll need to disable `SIP`. To do so, you'll need to reboot into recovery mode. Follow the below instructions:
+
+- Reboot and hold `CMD + r` while the computer is rebooting.
+- Click "utilities" and then "terminal" to open a CLI.
+- Run: `csrutil disable`
+- Restart the computer.
+
+Run the install/bootstrap script. This script requires `homebrew`.
 
 ```shell
 ./bootstrap

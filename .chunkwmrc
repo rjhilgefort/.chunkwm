@@ -74,11 +74,6 @@ chunkc set mouse_move_window             1
 chunkc set mouse_resize_window           1
 # chunkc set mouse_motion_interval         1000
 
-# TODO: This doesn't work
-# Window Exceptions
-# chunkc tiling::rule --owner \"Harvest\" --state float
-# chunkc tiling::rule --owner Spotify --desktop 4 --follow-desktop
-
 #
 # NOTE: specify plugins to load when chunkwm starts.
 #       if chunkc plugin_dir is not set, the absolutepath is necessary.
@@ -86,3 +81,26 @@ chunkc set mouse_resize_window           1
 chunkc core::load border.so
 chunkc core::load tiling.so
 chunkc core::load ffm.so
+
+####################
+### Window Rules ###
+####################
+chunkc tiling::rule --owner Harvest --state float
+
+chunkc tiling::rule --owner \"Visual Studio Code\" --desktop 1 --follow-desktop
+chunkc tiling::rule --owner Vivaldi --desktop 1 --follow-desktop
+chunkc tiling::rule --owner Hyper --desktop 1 --follow-desktop
+# chunkc tiling::rule --owner Dash --desktop 1 --follow-desktop
+
+chunkc tiling::rule --owner \"Google Chrome\" --desktop 2 --follow-desktop
+chunkc tiling::rule --owner Messages --desktop 2 --follow-desktop
+chunkc tiling::rule --owner YakYak --desktop 2 --follow-desktop
+chunkc tiling::rule --owner Slack --desktop 2 --follow-desktop
+chunkc tiling::rule --owner Goofy --desktop 2 --follow-desktop
+
+chunkc tiling::rule --owner Mailspring --desktop 3 --follow-desktop
+chunkc tiling::rule --owner \"Fantastical 2\" --desktop 3 --follow-desktop
+chunkc tiling::rule --owner Todoist --desktop 3 --follow-desktop
+
+chunkc tiling::rule --owner Spotify --desktop 4 --follow-desktop
+chunkc tiling::rule --owner \"Plex Media Player\" --desktop 4 --follow-desktop
