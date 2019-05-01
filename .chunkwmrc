@@ -66,12 +66,11 @@ chunkc set window_fade_duration          0.1
 # Monitor things
 chunkc set monitor_focus_cycle           1
 
-# TODO: This doesn't work: https://github.com/koekeishiya/chunkwm/issues/593
 # Mouse settings
 chunkc set mouse_follows_focus           1
 chunkc set mouse_modifier                alt
-chunkc set mouse_move_window             1
-chunkc set mouse_resize_window           1
+chunkc set mouse_move_window             \"alt shift 1\"
+chunkc set mouse_resize_window           \"alt shift ctrl 1\"
 # chunkc set mouse_motion_interval         1000
 
 #
@@ -87,12 +86,12 @@ chunkc core::load ffm.so
 ####################
 chunkc tiling::rule --owner Harvest --state float
 
-chunkc tiling::rule --owner \"Visual Studio Code\" --desktop 1 --follow-desktop
-chunkc tiling::rule --owner Vivaldi --desktop 1 --follow-desktop
+# chunkc tiling::rule --owner \"Visual Studio Code\" --desktop 1 --follow-desktop
+# chunkc tiling::rule --owner Vivaldi --desktop 1 --follow-desktop
 chunkc tiling::rule --owner Hyper --desktop 1 --follow-desktop
 # chunkc tiling::rule --owner Dash --desktop 1 --follow-desktop
 
-chunkc tiling::rule --owner \"Google Chrome\" --desktop 2 --follow-desktop
+# chunkc tiling::rule --owner \"Google Chrome\" --desktop 2 --follow-desktop
 chunkc tiling::rule --owner Messages --desktop 2 --follow-desktop
 chunkc tiling::rule --owner YakYak --desktop 2 --follow-desktop
 chunkc tiling::rule --owner Slack --desktop 2 --follow-desktop

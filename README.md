@@ -82,6 +82,7 @@ Here's a list of all the bindings, followed by a keyboard diagram that represent
 | <a id="move-focused-down" /> `alt + shift - j`  | Move focused window down  |
 | <a id="move-focused-up" /> `alt + shift - k`    | Move focused window up    |
 | <a id="move-focused-right" /> `alt + shift - l` | Move focused window right |
+| `alt + shift - mouse-1` | By holding down "left-click" you can click and drag a window to swap with another. |
 
 | Move Window To Workspace                              | Description                                  |
 | ----------------------------------------------------- | -------------------------------------------- |
@@ -115,10 +116,11 @@ Here's a list of all the bindings, followed by a keyboard diagram that represent
 
 | Resize Window                                    | Description                 |
 | ------------------------------------------------ | --------------------------- |
-| <a id="resize-left" /> `shift + alt + ctrl - h`  | Resize focused window left  |
-| <a id="resize-down" /> `shift + alt + ctrl - j`  | Resize focused window down  |
-| <a id="resize-up" /> `shift + alt + ctrl - k`    | Resize focused window up    |
-| <a id="resize-right" /> `shift + alt + ctrl - l` | Resize focused window right |
+| <a id="resize-left" /> `alt + shift + ctrl - h`  | Resize focused window left  |
+| <a id="resize-down" /> `alt + shift + ctrl - j`  | Resize focused window down  |
+| <a id="resize-up" /> `alt + shift + ctrl - k`    | Resize focused window up    |
+| <a id="resize-right" /> `alt + shift + ctrl - l` | Resize focused window right |
+| `alt + shift + ctrl - mouse-1` | By holding down "left-click" you can click and drag a window to resize it relative to the windows around it. See gif below diagram. |
 
 <big><pre>
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
@@ -133,7 +135,8 @@ Here's a list of all the bindings, followed by a keyboard diagram that represent
 │LCtl│LAlt│    │                        │    │    │ │   │   │   │
 └────┴────┴────┴────────────────────────┴────┴────┘ └───┴───┴───┘
 </big></pre>
- 
+
+![mouse-resize](assets/mouse-resize.gif)
 
 ## TODO
 
@@ -145,10 +148,10 @@ M1 - No-config Setup
 - [x] Get desktop focusing and window throws to desktop working.
 - [x] Documentation of `skhd` configuration.
 - [x] Layout visualization- ascii art good enough until further stabilized.
-- [ ] Figure out why mouse resize and move aren't working.
+- [x] Figure out why mouse resize and move aren't working.
+- [ ] Add bit bar install and chunkwm plugin to `bootstrap` script.
 - [ ] Allow for a configuration extension/override via user file.
 - [ ] Allow for layout serialization and de-serialization ([🔗](https://github.com/koekeishiya/chunkwm/blob/master/src/plugins/tiling/README.md#serialize-desktop-bsp-tree-to-file))
-- [ ] Add bit bar install and chunkwm plugin to `bootstrap` script.
 
 M2 - GUI 
 - [ ] Stand up an electron app.
