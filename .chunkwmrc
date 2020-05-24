@@ -69,13 +69,33 @@ chunkc set mouse_modifier                alt
 chunkc set mouse_move_window             1
 chunkc set mouse_resize_window           1
 
-# chunkc tiling::rule --owner "Harvest" --state float
+#
+# Desktop App Assignments
+#
+chunkc tiling::rule --owner Hyper --desktop 1 --follow-desktop
+chunkc tiling::rule --owner Code --desktop 1 --follow-desktop
+chunkc tiling::rule --owner Firefox --desktop 2 --follow-desktop
+chunkc tiling::rule --owner Vivaldi --desktop 2 --follow-desktop
+chunkc tiling::rule --owner \"Android Messages \" --desktop 3 --follow-desktop
+chunkc tiling::rule --owner Slack --desktop 3 --follow-desktop
+chunkc tiling::rule --owner Discord --desktop 3 --follow-desktop
+chunkc tiling::rule --owner YakYak --desktop 3 --follow-desktop
+chunkc tiling::rule --owner Goofy --desktop 3 --follow-desktop
+chunkc tiling::rule --owner Todoist --desktop 4 --follow-desktop
+chunkc tiling::rule --owner TogglDesktop --desktop 4 --follow-desktop
+chunkc tiling::rule --owner Spotify --desktop 5 --follow-desktop
+chunkc tiling::rule --owner Notion --desktop 5 --follow-desktop
+chunkc tiling::rule --owner Steam --desktop 7 --follow-desktop
 
 #
 # NOTE: specify plugins to load when chunkwm starts.
 #       if chunkc plugin_dir is not set, the absolutepath is necessary.
 #
-
 chunkc core::load border.so
 chunkc core::load tiling.so
 chunkc core::load ffm.so
+
+#
+# Desktop Apps To Run On Startup
+#
+# /Applications/Hyper.app/Contents/MacOS/Hyper ~ &

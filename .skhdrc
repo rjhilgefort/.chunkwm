@@ -10,36 +10,35 @@
 
 alt - return : /Applications/Hyper.app/Contents/MacOS/Hyper ~ &
 
-# enter fullscreen mode for the focused container
-alt - f : chunkc tiling::window --toggle fullscreen
-# shift + alt - f : chunkc tiling::window --toggle native-fullscreen
-
-# Change tiling padding
-alt - w : chunkc tiling::desktop --toggle offset
-
-# change layout of desktop
-alt - e : chunkc tiling::desktop --rotate 90
-alt - r : chunkc tiling::desktop --layout monocle
-alt - t : chunkc tiling::desktop --layout bsp
-
 # kill focused window
 shift + alt - q : chunkc tiling::window --close
 
+# enter fullscreen mode for the focused container
+alt - f : chunkc tiling::window --toggle fullscreen
+shift + alt - f : chunkc tiling::window --toggle native-fullscreen
+
+# Change tiling padding
+alt - a : chunkc tiling::desktop --toggle offset
+alt - z : chunkc tiling::desktop --rotate 90
+
+# change layout of desktop
+alt - s : chunkc tiling::desktop --layout monocle
+alt - d : chunkc tiling::desktop --layout bsp
+
+
 # change focus
-alt - p : chunkc tiling::window --focus prev
-alt - n : chunkc tiling::window --focus next
 alt - h : chunkc tiling::window --focus west
 alt - j : chunkc tiling::window --focus south
 alt - k : chunkc tiling::window --focus north
 alt - l : chunkc tiling::window --focus east
-# TODO: Allow for whitelist? chunkc tiling::query --window name
+# TODO: Allow for whitelist to not conflict? chunkc tiling::query --window name
 # ctrl - h : chunkc tiling::window --focus west
 # ctrl - j : chunkc tiling::window --focus south
 # ctrl - k : chunkc tiling::window --focus north
 # ctrl - l : chunkc tiling::window --focus east
 
 # focus on desktop
-alt - m : chunkc tiling::desktop --focus $(chunkc get _last_active_desktop)
+# alt - m : chunkc tiling::desktop --focus $(chunkc get _last_active_desktop)
 alt - p : chunkc tiling::desktop --focus prev
 alt - n : chunkc tiling::desktop --focus next
 alt - 1 : chunkc tiling::desktop --focus 1
@@ -49,6 +48,18 @@ alt - 4 : chunkc tiling::desktop --focus 4
 alt - 5 : chunkc tiling::desktop --focus 5
 alt - 6 : chunkc tiling::desktop --focus 6
 alt - 7 : chunkc tiling::desktop --focus 7
+alt - 8 : chunkc tiling::desktop --focus 8
+alt - 9 : chunkc tiling::desktop --focus 9
+# planck alts
+alt - q : chunkc tiling::desktop --focus 1
+alt - w : chunkc tiling::desktop --focus 2
+alt - e : chunkc tiling::desktop --focus 3
+alt - r : chunkc tiling::desktop --focus 4
+alt - t : chunkc tiling::desktop --focus 5
+alt - y : chunkc tiling::desktop --focus 6
+alt - u : chunkc tiling::desktop --focus 7
+alt - i : chunkc tiling::desktop --focus 8
+alt - o : chunkc tiling::desktop --focus 9
 
 ###################
 ### shift + alt ###
@@ -90,6 +101,10 @@ shift + alt - 6 : chunkc tiling::window --send-to-desktop 6;\
                   chunkc tiling::desktop --focus 6
 shift + alt - 7 : chunkc tiling::window --send-to-desktop 7;\
                   chunkc tiling::desktop --focus 7
+shift + alt - 8 : chunkc tiling::window --send-to-desktop 8;\
+                  chunkc tiling::desktop --focus 8
+shift + alt - 9 : chunkc tiling::window --send-to-desktop 9;\
+                  chunkc tiling::desktop --focus 9
 
 ##########################
 ### shift + alt + ctrl ###
