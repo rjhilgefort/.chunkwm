@@ -10,9 +10,6 @@
 
 alt - return : /Applications/Hyper.app/Contents/MacOS/Hyper ~ &
 
-# kill focused window
-shift + alt - q : chunkc tiling::window --close
-
 # enter fullscreen mode for the focused container
 alt - f : chunkc tiling::window --toggle fullscreen
 shift + alt - f : chunkc tiling::window --toggle native-fullscreen
@@ -42,6 +39,7 @@ alt - l : chunkc tiling::window --focus east
 alt - tab : chunkc tiling::desktop --focus $(chunkc get _last_active_desktop)
 alt - p : chunkc tiling::desktop --focus prev
 alt - n : chunkc tiling::desktop --focus next
+# standard
 alt - 1 : chunkc tiling::desktop --focus 1
 alt - 2 : chunkc tiling::desktop --focus 2
 alt - 3 : chunkc tiling::desktop --focus 3
@@ -66,14 +64,6 @@ alt - o : chunkc tiling::desktop --focus 9
 ### shift + alt ###
 ###################
 
-# Check if running
-shift + alt - i : osascript -e 'display notification "⚠️ Hi!" with title "🔎 Chunkwm" sound name "Tink"';
-
-# reload chunkwm
-shift + alt - r : osascript -e 'display notification "⚠️ Reload️ing..." with title "🔎 Chunkwm" sound name "Tink"';\
-                  brew services restart chunkwm;\
-                  osascript -e 'display notification "♻️ Reloaded️" with title "🔎 Chunkwm" sound name "Pop"'
-
 # change focus between tiling / floating windows
 shift + alt - space : chunkc tiling::window --toggle float
 
@@ -90,6 +80,7 @@ shift + alt - p : chunkc tiling::window --send-to-desktop prev;\
                   chunkc tiling::desktop --focus prev
 shift + alt - n : chunkc tiling::window --send-to-desktop next;\
                   chunkc tiling::desktop --focus next
+# standard
 shift + alt - 1 : chunkc tiling::window --send-to-desktop 1;\
                   chunkc tiling::desktop --focus 1
 shift + alt - 2 : chunkc tiling::window --send-to-desktop 2;\
@@ -108,10 +99,33 @@ shift + alt - 8 : chunkc tiling::window --send-to-desktop 8;\
                   chunkc tiling::desktop --focus 8
 shift + alt - 9 : chunkc tiling::window --send-to-desktop 9;\
                   chunkc tiling::desktop --focus 9
+# planck alts
+shift + alt - q : chunkc tiling::window --send-to-desktop 1;\
+                  chunkc tiling::desktop --focus 1
+shift + alt - w : chunkc tiling::window --send-to-desktop 2;\
+                  chunkc tiling::desktop --focus 2
+shift + alt - e : chunkc tiling::window --send-to-desktop 3;\
+                  chunkc tiling::desktop --focus 3
+shift + alt - r : chunkc tiling::window --send-to-desktop 4;\
+                  chunkc tiling::desktop --focus 4
+shift + alt - t : chunkc tiling::window --send-to-desktop 5;\
+                  chunkc tiling::desktop --focus 5
+shift + alt - y : chunkc tiling::window --send-to-desktop 6;\
+                  chunkc tiling::desktop --focus 6
+shift + alt - u : chunkc tiling::window --send-to-desktop 7;\
+                  chunkc tiling::desktop --focus 7
+shift + alt - i : chunkc tiling::window --send-to-desktop 8;\
+                  chunkc tiling::desktop --focus 8
+shift + alt - o : chunkc tiling::window --send-to-desktop 9;\
+                  chunkc tiling::desktop --focus 9
 
 ##########################
 ### shift + alt + ctrl ###
 ##########################
+
+# TODO: What's this going to be, it conflicts with planck alts
+# kill focused window
+shift + alt + ctrl - q : chunkc tiling::window --close
 
 # resize windows
 # General docs: https://github.com/koekeishiya/chunkwm/blob/master/src/plugins/tiling/README.md#increase-region-size
@@ -120,6 +134,14 @@ shift + alt + ctrl - h : chunkc tiling::window --use-temporary-ratio 0.05 --adju
 shift + alt + ctrl - j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
 shift + alt + ctrl - k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
 shift + alt + ctrl - l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+
+# Check if running
+shift + alt + ctrl - i : osascript -e 'display notification "⚠️ Hi!" with title "🔎 Chunkwm" sound name "Tink"';
+
+# reload chunkwm
+shift + alt + ctrl - r : osascript -e 'display notification "⚠️ Reload️ing..." with title "🔎 Chunkwm" sound name "Tink"';\
+                         brew services restart chunkwm;\
+                         osascript -e 'display notification "♻️ Reloaded️" with title "🔎 Chunkwm" sound name "Pop"'
 
 # RJH Open up all apps
 shift + alt + ctrl - a : open -a Vivaldi;\
